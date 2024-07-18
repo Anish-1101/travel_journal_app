@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "traveljournalapp01c24eee": {}
+      },
+      "api": {
+        "traveljournalapp": {}
+      },
+      "storage": {
+        "journalimages": {}
       }
     }
   }
