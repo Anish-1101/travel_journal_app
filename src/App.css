@@ -13,6 +13,32 @@
   }
 }
 
+.container {
+  font-family: "Gill Sans", "Sans-Serif", monospace;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-container {
+  width: 50%; 
+  height: 100vh; 
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.left-container .add-button {
+  margin-top: 10px;
+}
+
+.right-container {
+  width: 50%; 
+  height: 100vh; 
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

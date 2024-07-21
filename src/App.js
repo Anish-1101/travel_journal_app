@@ -80,18 +80,26 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      <Heading level={1}>Travel Log</Heading>
-      <View as="form" margin="3rem 0" onSubmit={createNote}>
-        <Flex direction="row" justifyContent="center">
+      
+      <Heading level={1} style={{ fontFamily: '"Gill Sans", "Sans-Serif", monospace', fontWeight: 400}}> Travel Journal</Heading>
+      <div className = "container">
+      
+      <div className= "left-container">
+      
+      <Heading level = {2} style={{ fontFamily: '"Gill Sans", "Sans-Serif", monospace'}}> Log Entry </Heading>
+      <Button onClick={signOut} style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 1000 }}>Sign Out</Button>
+      <View as="form" margin="1rem 0" onSubmit={createNote}>
           <TextField name="country" placeholder="Country" label="Country" required />
           <TextField name="city" placeholder="City" label="City" />
           <TextField name="date_arrived" placeholder="Date Arrived" label="Date Arrived" type="date"/>
           <TextField name="date_departed" placeholder="Date Departed" label="Date Departed" type="date"/>
           <TextField name="favorite_moments" placeholder="Favorite Moments" label="Favorite Moments" />
           <View name="image" as="input" type="file" style={{ alignSelf: "end" }} />
-          <Button type="submit" variation="primary">Add Entry</Button>
-        </Flex>
+          <Button type="submit" variation="primary" className = "add-button">Add Entry</Button>
       </View>
+      </div>
+      
+      <div className= "right-container">
       <Heading level={2}>Your Entries</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
@@ -100,13 +108,17 @@ const App = ({ signOut }) => {
             <Text as="span">{note.date_arrived} to {note.date_departed}</Text>
             <Text as="span">{note.favorite_moments}</Text>
             {note.image && (
-              <Image src={note.image.url.href} alt={`visual aid for ${note.country}`} style={{ width: 400 }} />
+              <Image src={note.image.url.href} alt={`visual aid for ${note.country}`} style={{ width: 200 }} />
             )}
             <Button variation="link" onClick={() => deleteNote(note)}>Delete Entry</Button>
           </Flex>
         ))}
       </View>
-      <Button onClick={signOut}>Sign Out</Button>
+      
+      </div>
+      
+      </div>
+      
     </View>
   );
 };
