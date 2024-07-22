@@ -80,13 +80,13 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      
-      <Heading level={1} style={{ fontFamily: '"Gill Sans", "Sans-Serif", monospace', fontWeight: 400}}> Travel Journal</Heading>
+      <div style = {{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+      <Image src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-journal-clipart-an-open-notebook-and-other-items-on-the-surface-vector-png-image_6807885.png" alt="Title Image" style={{ width: '90px', marginRight: '10px' }} />
+      <Heading level={1} style={{fontFamily: '"Georgia", "Serif", monospace', fontWeight: 400, padding: '25px'}}> Travel Journal</Heading>
+      </div>
       <div className = "container">
-      
       <div className= "left-container">
-      
-      <Heading level = {2} style={{ fontFamily: '"Gill Sans", "Sans-Serif", monospace'}}> Log Entry </Heading>
+      <Heading level = {3} style={{ fontFamily: '"Gill Sans", "Sans-Serif" , monospace'}}> Log Entry </Heading>
       <Button onClick={signOut} style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 1000 }}>Sign Out</Button>
       <View as="form" margin="1rem 0" onSubmit={createNote}>
           <TextField name="country" placeholder="Country" label="Country" required />
@@ -99,22 +99,24 @@ const App = ({ signOut }) => {
       </View>
       </div>
       
+      
       <div className= "right-container">
-      <Heading level={2}>Your Entries</Heading>
-      <View margin="3rem 0">
+      <Heading level={2} >Travel Log</Heading>
+      <View margin="1rem 0">
         {notes.map((note) => (
-          <Flex key={note.id || note.country} direction="row" justifyContent="center" alignItems="center">
+          <Flex key={note.id || note.country} direction="row" justifyContent="center" alignItems="center" style = {{padding:'20px'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', width: '300px', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
             <Text as="strong" fontWeight={700}>{note.country} - {note.city}</Text>
             <Text as="span">{note.date_arrived} to {note.date_departed}</Text>
-            <Text as="span">{note.favorite_moments}</Text>
+            <Text as="span">{note.favorite_moments} </Text>
+            </div>
             {note.image && (
-              <Image src={note.image.url.href} alt={`visual aid for ${note.country}`} style={{ width: 200 }} />
+              <Image src={note.image.url.href} alt={`visual aid for ${note.country}`} style={{ width: 300, }} />
             )}
             <Button variation="link" onClick={() => deleteNote(note)}>Delete Entry</Button>
           </Flex>
         ))}
       </View>
-      
       </div>
       
       </div>
