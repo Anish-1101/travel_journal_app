@@ -80,23 +80,23 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      <div style = {{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+      <div className = "header-container">
       <Image src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-journal-clipart-an-open-notebook-and-other-items-on-the-surface-vector-png-image_6807885.png" alt="Title Image" style={{ width: '90px', marginRight: '10px' }} />
-      <Heading level={1} style={{fontFamily: '"Georgia", "Serif", monospace', fontWeight: 400, padding: '25px'}}> Travel Journal</Heading>
+      <Heading level={1} className="header-title"> Travel Journal</Heading>
       </div>
       <div className = "container">
-      <div className= "left-container">
-      <Heading level = {3} style={{ fontFamily: '"Gill Sans", "Sans-Serif" , monospace'}}> Log Entry </Heading>
-      <Button onClick={signOut} style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 1000 }}>Sign Out</Button>
-      <View as="form" margin="1rem 0" onSubmit={createNote}>
-          <TextField name="country" placeholder="Country" label="Country" required />
-          <TextField name="city" placeholder="City" label="City" />
-          <TextField name="date_arrived" placeholder="Date Arrived" label="Date Arrived" type="date"/>
-          <TextField name="date_departed" placeholder="Date Departed" label="Date Departed" type="date"/>
-          <TextField name="favorite_moments" placeholder="Favorite Moments" label="Favorite Moments" />
-          <View name="image" as="input" type="file" style={{ alignSelf: "end" }} />
-          <Button type="submit" variation="primary" className = "add-button">Add Entry</Button>
-      </View>
+        <div className= "left-container">
+        <Heading level = {3} className="log-entry-title"> Log Entry </Heading>
+        <Button onClick={signOut} className="sign-out-button">Sign Out</Button>
+        <View as="form" margin="1rem 0" onSubmit={createNote}>
+            <TextField name="country" placeholder="Country" label="Country" required />
+            <TextField name="city" placeholder="City" label="City" />
+            <TextField name="date_arrived" placeholder="Date Arrived" label="Date Arrived" type="date"/>
+            <TextField name="date_departed" placeholder="Date Departed" label="Date Departed" type="date"/>
+            <TextField name="favorite_moments" placeholder="Favorite Moments" label="Favorite Moments" />
+            <View name="image" as="input" type="file" style={{ alignSelf: "end" }} />
+            <Button type="submit" variation="primary" className = "add-button">Add Entry</Button>
+        </View>
       </div>
       
       
@@ -105,7 +105,7 @@ const App = ({ signOut }) => {
       <View margin="1rem 0">
         {notes.map((note) => (
           <Flex key={note.id || note.country} direction="row" justifyContent="center" alignItems="center" style = {{padding:'20px'}}>
-            <div style={{ display: 'flex', flexDirection: 'column', width: '300px', wordWrap: 'break-word', overflowWrap: 'break-word' }}>
+            <div className ="entry-text">
             <Text as="strong" fontWeight={700}>{note.country} - {note.city}</Text>
             <Text as="span">{note.date_arrived} to {note.date_departed}</Text>
             <Text as="span">{note.favorite_moments} </Text>
