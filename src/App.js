@@ -108,7 +108,7 @@ const App = ({ signOut }) => {
             <div className ="entry-text">
             <Text as="strong" fontWeight={700}>{note.country} - {note.city}</Text>
             <Text as="span">{note.date_arrived} to {note.date_departed}</Text>
-            <Text as="span">{note.favorite_moments} </Text>
+            <Text as="span"> Favorite Moments:   {note.favorite_moments} </Text>
             </div>
             {note.image && (
               <Image src={note.image.url.href} alt={`visual aid for ${note.country}`} style={{ width: 300, }} />
