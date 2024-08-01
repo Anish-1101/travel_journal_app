@@ -2,10 +2,6 @@ Travel Journal App:
 
 Travel journal app is a cloud based application designed for users to document their travel experiences. 
 
-Amplify Application: https://main.d28vibyzbnjahv.amplifyapp.com/
-
-Reload page if the image fails to load when adding journal entry.
-
 Technologies Used: 
 • React
 • AWS Amplify 
