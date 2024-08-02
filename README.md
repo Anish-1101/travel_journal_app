@@ -1,5 +1,7 @@
 Travel Journal App:
 
+<img width="1440" alt="Screen Shot 2024-07-23 at 3 34 14 PM" src="https://github.com/user-attachments/assets/2c0f2ab6-653d-4da1-a099-c589d62e41a2">
+
 Travel journal app is a cloud based application designed for users to document their travel experiences. 
 
 Technologies Used: 
