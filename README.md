@@ -29,7 +29,7 @@ Users can upload an image to complement their travel log entries.
 
 • Can create, delete and fetch log entries 
 
-Users have full control over their travel log allowing them to create new entries and delete existing ones and fetch their entries easily.
+Users have full control over their travel log allowing them to create new entries, delete existing ones and fetch their entries easily.
 
 
 
