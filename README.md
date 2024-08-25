@@ -1,9 +1,10 @@
-Travel Journal App:
+
 
 <img width="1440" alt="Screen Shot 2024-07-23 at 3 34 14 PM" src="https://github.com/user-attachments/assets/2c0f2ab6-653d-4da1-a099-c589d62e41a2">
+<img width="914" alt="Screenshot 2024-08-25 at 9 29 00 PM" src="https://github.com/user-attachments/assets/569d4d38-4ea0-4516-9ffb-7fa799f84090">
 
-![BUCKET UST TRACKER](https://github.com/user-attachments/assets/1e49098d-c7db-468a-81b8-28c4eb636c4f)
 
+Travel Journal App:
 
 Travel journal app is a cloud based application designed for users to document their travel experiences. 
 
